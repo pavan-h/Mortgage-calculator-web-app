@@ -5,10 +5,12 @@ Find the project requirements here: [Mortgage calculator web app](https://www.co
 
 ## Tech/framework used
 Built with ___
+HTML 
+SCSS
+Java Script
 
 ## Screenshots and demo
-Screenshots of your app and/or a link to your live demo
-
+![screenshor](screenshot/Screen Shot 2022-10-18 at 3.46.31 PM.png)
 ## Installation
 Instructions for other developers on how to install and run your code on their local environment.
 
