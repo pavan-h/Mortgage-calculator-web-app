@@ -1,0 +1,109 @@
+@forward "globals";
+@import "./globals/color";
+
+body {
+  background-color: $cream;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.cal {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 800px;
+  background-color: $coral;
+  border-radius: 7px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  &-title {
+    padding: 5px 20px;
+  }
+
+  &-input-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 10px;
+  }
+
+  button {
+    position: relative;
+    top: -50px;
+    left: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: $cream;
+    height: 50px;
+    width: 180px;
+    color: $coral;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+}
+
+.space {
+  margin-bottom: 40px;
+}
+
+input[type="range"] {
+  outline: 0;
+  border: 0;
+  border-radius: 500px;
+  width: 200px;
+  max-width: 100%;
+  margin: 24px 0 16px;
+  transition: box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+  // Chrome
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    & {
+      overflow: hidden;
+      height: 20px;
+      -webkit-appearance: none;
+      background-color: $cream;
+    }
+    &::-webkit-slider-runnable-track {
+      height: 20px;
+      -webkit-appearance: none;
+      color: #444;
+      // margin-top: -1px;
+      transition: box-shadow 0.2s ease-in-out;
+    }
+    &::-webkit-slider-thumb {
+      width: 25px;
+      -webkit-appearance: none;
+      height: 25px;
+      cursor: pointer;
+      background: $cream;
+      box-shadow: -340px 0 0 320px $desert-sun, inset 0 0 0 40px $coral;
+      border-radius: 50%;
+      transition: box-shadow 0.2s ease-in-out;
+      position: relative;
+      top: -2px;
+    }
+    &:active::-webkit-slider-thumb {
+      background: $cream;
+      box-shadow: -340px 0 0 320px $desert-sun, inset 0 0 0 3px $coral;
+    }
+  }
+  // Firefox
+  &::-moz-range-progress {
+    background-color: $cream;
+  }
+  &::-moz-range-track {
+    background-color: #9a905d;
+  }
+  // IE
+  &::-ms-fill-lower {
+    background-color: #43e5f7;
+  }
+  &::-ms-fill-upper {
+    background-color: #9a905d;
+  }
+}
