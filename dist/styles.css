@@ -45,27 +45,52 @@ body {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .cal-title {
-  padding: 5px 20px;
+  position: relative;
+  margin-bottom: 10px;
+  top: 100px;
+  padding: 80px 10px;
+}
+@media only screen and (min-width: 769px) {
+  .cal-title {
+    padding: 5px 20px;
+    top: 0;
+  }
 }
 .cal-input-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
   padding: 10px;
 }
-.cal button {
-  position: relative;
-  top: -50px;
-  left: 50px;
-  border-radius: 10px;
-  border: none;
-  background-color: #f6eee0;
+@media only screen and (min-width: 769px) {
+  .cal-input-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+.cal .cal-btn {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+.cal .cal-btn button {
   height: 50px;
   width: 180px;
   color: #c38370;
   font-weight: 700;
   font-size: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #f6eee0;
   cursor: pointer;
+}
+@media only screen and (min-width: 769px) {
+  .cal .cal-btn {
+    position: relative;
+    top: -80px;
+  }
 }
 
 .space {
