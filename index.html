@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cal cal-container">
+        <div class="cal-title"><h1>Mortage calculator</h1></div>
+        <div class="cal-input-container">
+          <div class="cal-grid">
+            <lable for="purchase"
+              ><h3>
+                purchase price:
+                <span id="purchase-el"><strong>$450,000</strong></span>
+              </h3>
+              <input
+                type="range"
+                min="0"
+                max="1000000"
+                step="50000"
+                id="purchase"
+              />
+            </lable>
+          </div>
+          <div class="cal-grid">
+            <lable for="down-payment"
+              ><h3>
+                Down Payment:
+                <span id="down-el"><strong>$135,000</strong></span>
+              </h3>
+              <input
+                type="range"
+                min="10000"
+                max="1000000"
+                step="25000"
+                value="100000"
+                id="down-payment"
+              />
+            </lable>
+          </div>
+          <div class="cal-grid">
+            <lable for="time"
+              ><h3>
+                Repayment Time:
+                <span id="time-el"><strong>20</strong></span> <span>years</span>
+              </h3>
+              <input type="range" min="1" max="30" step="1" id="time" />
+            </lable>
+          </div>
+          <div class="cal-grid">
+            <lable for="intrest"
+              ><h3>
+                intrest rate:
+                <span id="intrest-el"><strong>4%</strong></span>
+              </h3>
+              <input type="range" min="1" max="20" step="0.5" id="intrest" />
+            </lable>
+          </div>
+          <div class="cal-grid">
+            <lable for="loan-amt">
+              <h3 class="space">Loan amount</h3>
+              <h2 id="loan"><strong>$315000</strong></h2>
+            </lable>
+          </div>
+          <div class="cal-grid">
+            <lable for="estimate">
+              <h3 class="space">Estimate pr.month:</h3>
+              <h2 id="estimate"><strong>$1300</strong></h2>
+            </lable>
+          </div>
+        </div>
+        <div class="cal-btn"></div>
+        <button onclick="getResults()" id="results">
+          Get a mortgage quote
+        </button>
+      </div>
+    </div>
+
+    <script src="./src/js/app.js"></script>
+  </body>
+</html>
