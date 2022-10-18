@@ -1,0 +1,128 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  color: #f6eee0;
+  text-transform: capitalize;
+}
+
+body {
+  background-color: #f6eee0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.cal {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 800px;
+  background-color: #c38370;
+  border-radius: 7px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.cal-title {
+  padding: 5px 20px;
+}
+.cal-input-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 10px;
+}
+.cal button {
+  position: relative;
+  top: -50px;
+  left: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f6eee0;
+  height: 50px;
+  width: 180px;
+  color: #c38370;
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.space {
+  margin-bottom: 40px;
+}
+
+input[type=range] {
+  outline: 0;
+  border: 0;
+  border-radius: 500px;
+  width: 200px;
+  max-width: 100%;
+  margin: 24px 0 16px;
+  transition: box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type=range] {
+    overflow: hidden;
+    height: 20px;
+    -webkit-appearance: none;
+    background-color: #f6eee0;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    height: 20px;
+    -webkit-appearance: none;
+    color: #444;
+    -webkit-transition: box-shadow 0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    width: 25px;
+    -webkit-appearance: none;
+    height: 25px;
+    cursor: pointer;
+    background: #f6eee0;
+    box-shadow: -340px 0 0 320px #a45c40, inset 0 0 0 40px #c38370;
+    border-radius: 50%;
+    -webkit-transition: box-shadow 0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out;
+    position: relative;
+    top: -2px;
+  }
+  input[type=range]:active::-webkit-slider-thumb {
+    background: #f6eee0;
+    box-shadow: -340px 0 0 320px #a45c40, inset 0 0 0 3px #c38370;
+  }
+}
+input[type=range]::-moz-range-progress {
+  background-color: #f6eee0;
+}
+input[type=range]::-moz-range-track {
+  background-color: #9a905d;
+}
+input[type=range]::-ms-fill-lower {
+  background-color: #43e5f7;
+}
+input[type=range]::-ms-fill-upper {
+  background-color: #9a905d;
+}/*# sourceMappingURL=styles.css.map */
